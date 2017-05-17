@@ -15,9 +15,9 @@ In your `package.json` add a `postinstall` script:
 
 ```json
 {
-    "scripts": {
-        "postinstall": "n9-sonar-generate"
-    }
+  "scripts": {
+    "postinstall": "n9-sonar-generate"
+  }
 }
 ```
 
