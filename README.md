@@ -65,6 +65,7 @@ Example:
 ```json
 {
   "sonar": {
+    "coverage.exclusions": "src/*.d.ts",
     "ts.coverage.lcovReportPath": "./coverage/lcov.info",
     "ts.tslint.path": "./coverage/lcov.info",
     "ts.tslint.path": "./node_modules/.bin/tslint",
