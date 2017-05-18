@@ -1,6 +1,6 @@
 {
   "name": "n9-node-sonar-generate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Neo9 Node Sonar Generate Module",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
