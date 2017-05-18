@@ -11,12 +11,12 @@ npm install --save-dev n9-node-sonar-generate
 
 ## Usage
 
-In your `package.json` add a `postinstall` script:
+In your `package.json` add the end of your `test` script, add `n9-sonar-generate` command:
 
 ```json
 {
   "scripts": {
-    "postinstall": "n9-sonar-generate"
+    "test": "... && n9-sonar-generate"
   }
 }
 ```
