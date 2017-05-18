@@ -16,7 +16,7 @@
     "test": "npm run lint && npm run build && cp -rf test/fixtures dist/test/fixtures && nyc --reporter=lcov ava --verbose --serial dist/test/",
     "preversion": "npm test",
     "prepublish": "npm run build",
-    "postinstall": "node dist/src/bin/n9-sonar-generate.js"
+    "postinstall": "npm run build && node dist/src/bin/n9-sonar-generate.js"
   },
   "sonar": {
     "coverage.exclusions": "src/*.d.ts,src/bin/*",
