@@ -2,9 +2,9 @@ import { join } from 'path'
 
 import { remove, writeFile } from 'fs-extra'
 import * as appRootDir from 'app-root-dir'
-import N9Log from 'n9-node-log'
+import n9Log from 'n9-node-log'
 
-const log = new N9Log('n9-sonar-generate')
+const log = n9Log('n9-sonar-generate')
 const SONAR_FILENAME = 'sonar-project.properties'
 
 export default async function(path?: string): Promise<string> {
