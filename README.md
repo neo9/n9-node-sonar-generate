@@ -67,8 +67,12 @@ Example:
   "sonar": {
     "coverage.exclusions": "src/*.d.ts",
     "ts.coverage.lcovReportPath": "./coverage/lcov.info",
-    "ts.tslint.path": "./coverage/lcov.info",
     "ts.tslint.path": "./node_modules/.bin/tslint",
     "ts.tslint.configPath": "./tslint.json"
+  }
 }
 ```
+
+## Gitignore
+
+Don't forget to add `sonar-project.properties` in your `.gitignore`

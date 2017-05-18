@@ -1,0 +1,47 @@
+{
+  "name": "n9-node-sonar-generate",
+  "version": "0.0.1",
+  "description": "Neo9 Node Sonar Generate Module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "bin": {
+    "n9-sonar-generate": "./dist/src/bin/n9-sonar-generate.js"
+  },
+  "files": [
+    "dist/src"
+  ],
+  "scripts": {
+    "build": "rimraf dist/ && tsc",
+    "lint": "tslint src/*.ts",
+    "test": "npm run lint && npm run build && cp -rf test/fixtures dist/test/fixtures && nyc --reporter=lcov ava --verbose --serial dist/test/",
+    "preversion": "npm test",
+    "prepublish": "npm run build",
+    "postinstall": "node dist/src/bin/n9-sonar-generate.js"
+  },
+  "sonar": {
+    "coverage.exclusions": "src/*.d.ts,src/bin/*",
+    "ts.coverage.lcovReportPath": "./coverage/lcov.info",
+    "ts.tslint.path": "./node_modules/.bin/tslint",
+    "ts.tslint.configPath": "./tslint.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@scm.bytefactory.fr:2222/n9node/n9-node-conf.git"
+  },
+  "author": "Sebastien Chopin <sebastien.chopin@neo9.fr>",
+  "dependencies": {
+    "app-root-dir": "^1.0.2",
+    "fs-extra": "^3.0.1",
+    "n9-node-log": "^1.1.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^3.0.1",
+    "@types/node": "^7.0.18",
+    "ava": "^0.19.1",
+    "nyc": "^10.3.2",
+    "rimraf": "^2.6.1",
+    "std-mocks": "^1.0.1",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
+  }
+}
