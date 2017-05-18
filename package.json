@@ -13,10 +13,10 @@
   "scripts": {
     "build": "rimraf dist/ && tsc",
     "lint": "tslint src/*.ts",
-    "test": "npm run lint && npm run build && cp -rf test/fixtures dist/test/fixtures && nyc --reporter=lcov ava --verbose --serial dist/test/",
+    "test": "npm run lint && npm run build && cp -rf test/fixtures dist/test/fixtures && nyc --reporter=lcov ava --verbose --serial dist/test/ && npm run n9-sonar-generate",
     "preversion": "npm test",
     "prepublish": "npm run build",
-    "postinstall": "npm run build && node dist/src/bin/n9-sonar-generate.js"
+    "n9-sonar-generate": "node dist/src/bin/n9-sonar-generate.js"
   },
   "sonar": {
     "coverage.exclusions": "src/*.d.ts,src/bin/*",
