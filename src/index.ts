@@ -2,7 +2,7 @@ import { join } from 'path'
 
 import { remove, writeFile } from 'fs-extra'
 import * as appRootDir from 'app-root-dir'
-import n9Log from 'n9-node-log'
+import n9Log from '@neo9/n9-node-log'
 
 const log = n9Log('n9-sonar-generate')
 const SONAR_FILENAME = 'sonar-project.properties'
@@ -17,7 +17,7 @@ export default async function(path?: string): Promise<string> {
 		pkg = require(join(path, 'package.json'))
 	} catch (err) {
 		log.error('Could not locate package.json, aborting.')
-		process.exit(1)
+		process.exitCode = 1
 		return
 	}
 	// Remove sonar project file

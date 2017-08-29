@@ -57,23 +57,15 @@ sonar.tests=./test
 	t.true(output.stdout[2].includes('[n9-sonar-generate] Generating sonar-project.properties'))
 	t.true(output.stdout[3].includes('[n9-sonar-generate] Done'))
 	await remove(sonarPath)
+	t.not(process.exitCode, 1)
 })
 
 test('Should not generate if no package.json is found', async (t) => {
 	stdMock.use()
-	let exitCode = 0
-	const processExit = new Promise((resolve) => {
-		const oldExit = process.exit
-		process.exit = (code) => {
-			process.exit = oldExit
-			exitCode = code
-			resolve()
-		}
-	})
 	await n9SonarGenerate('dont-exist/')
-	await processExit
 	stdMock.restore()
 	const output = stdMock.flush()
 	t.true(output.stdout[0].includes('Reading package.json'))
 	t.true(output.stderr[0].includes('Could not locate package.json, aborting'))
+	t.is(process.exitCode, 1)
 })

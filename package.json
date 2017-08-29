@@ -30,18 +30,18 @@
   },
   "author": "Sebastien Chopin <sebastien.chopin@neo9.fr>",
   "dependencies": {
+    "@neo9/n9-node-log": "^2.2.2",
     "app-root-dir": "^1.0.2",
-    "fs-extra": "^3.0.1",
-    "n9-node-log": "^2.0.0"
+    "fs-extra": "^4.0.1"
   },
   "devDependencies": {
-    "@types/fs-extra": "^3.0.1",
-    "@types/node": "^7.0.18",
-    "ava": "^0.19.1",
-    "nyc": "^10.3.2",
+    "@types/fs-extra": "^4.0.0",
+    "@types/node": "^8.0.25",
+    "ava": "^0.22.0",
+    "nyc": "^11.1.0",
     "rimraf": "^2.6.1",
     "std-mocks": "^1.0.1",
-    "tslint": "^5.2.0",
-    "typescript": "^2.3.2"
+    "tslint": "^5.7.0",
+    "typescript": "^2.4.2"
   }
 }
