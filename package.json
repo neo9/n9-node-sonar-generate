@@ -36,13 +36,13 @@
   },
   "author": "Sebastien Chopin <sebastien.chopin@neo9.fr>",
   "dependencies": {
-    "@neo9/n9-node-log": "^2.2.2",
+    "@neo9/n9-node-log": "^2.3.1",
     "app-root-dir": "^1.0.2",
     "fs-extra": "^4.0.1"
   },
   "devDependencies": {
     "@types/fs-extra": "^4.0.0",
-    "@types/node": "^8.0.25",
+    "@types/node": "^8.0.26",
     "ava": "^0.22.0",
     "codecov": "^2.3.0",
     "nyc": "^11.1.0",
