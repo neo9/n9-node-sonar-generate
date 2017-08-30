@@ -2,11 +2,15 @@
 
 Generate a `sonar-project.properties` file based on the project `package.json`.
 
+[![npm version](https://img.shields.io/npm/v/@neo9/n9-node-sonar-generate.svg)](https://www.npmjs.com/package/@neo9/n9-node-sonar-generate)
+[![Travis](https://img.shields.io/travis/neo9/n9-node-sonar-generate/master.svg)](https://travis-ci.org/neo9/n9-node-sonar-generate)
+[![Coverage](https://img.shields.io/codecov/c/github/neo9/n9-node-sonar-generate/master.svg)](https://codecov.io/gh/neo9/n9-node-sonar-generate)
+[![license](https://img.shields.io/github/license/neo9/n9-node-sonar-generate.svg)](https://github.com/neo9/n9-node-sonar-generate/blob/master/LICENSE)
 
 ## Installation
 
 ```bash
-npm install --save-dev n9-node-sonar-generate
+npm install --save-dev @neo9/n9-node-sonar-generate
 ```
 
 ## Usage
