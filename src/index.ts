@@ -25,7 +25,7 @@ export default async function(path?: string): Promise<string> {
 	await remove(join(path, SONAR_FILENAME))
 	// Add sonar keys
 	const sonar = pkg.sonar || {}
-	sonar.projectKey = sonar.projectKey || pkg.name
+	sonar.projectKey = (sonar.projectKey || pkg.name).replace(/@/g, '').replace(/\//g, ':')
 	sonar.projectName = sonar.projectName || pkg.description || sonar.projectKey
 	sonar.projectVersion = sonar.projectVersion || pkg.version
 	sonar.sources = sonar.sources || './src'
