@@ -1,3 +1,5 @@
+# No longer actively maintained
+
 # n9-node-sonar-generate
 
 Generate a `sonar-project.properties` file based on the project `package.json`.
